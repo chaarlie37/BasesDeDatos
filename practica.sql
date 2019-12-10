@@ -244,14 +244,3 @@ INSERT INTO emision VALUES ('Cadena 100', 27, 'A', '1234567I', TO_DATE('27/11/20
 SELECT radio, COUNT(*) FROM emision GROUP BY radio;
 
 SELECT emision.ISVN FROM emision GROUP BY ISVN
-SELECT artista.nacionnalidad FROM artista WHERE nombre = (SELECT MAX())
-SELECT artista.nacionnalidad FROM artista WHERE nombre IN (SELECT vinilo.artista FROM vinilo);
-
-SELECT artista.nacionnalidad FROM artista WHERE nombre IN (SELECT MAX(COUNT(*) FROM vin)SELECT vinilo.artista FROM vinilo GROUP BY artista) ;
-
-SELECT COUNT(*) FROM vinilo WHERE artista IN (SELECT artista.nombre FROM artista WHERE nacionnalidad = 'Inglesa');
-
-
-SELECT artista.nacionnalidad, COUNT(artista.nacionnalidad) maximo FROM artista
-GROUP BY nacionnalidad
-ORDER BY maximo;
